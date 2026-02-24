@@ -1,81 +1,103 @@
 # E-commerce Sales Analysis – SQL Portfolio Project
 
-
 ## 📌 Project Overview
 
-In this project, I analysed an e-commerce sales dataset using **pure MySQL** to uncover actionable business insights. I performed data cleaning, exploratory data analysis (EDA), and answered real-world business questions that managers/stakeholders would ask.
+In this project, I analyzed an **e-commerce sales dataset** using **pure MySQL** to uncover actionable business insights.  
+I performed data cleaning, exploratory data analysis (EDA), and answered real-world questions that managers and stakeholders typically ask.
 
-**Goal** 
-To demonstrate my SQL skills (aggregations, window functions, CTEs, subqueries, date manipulation) while thinking like a data analyst - focusing on **business value** rather than just technical queries.
+**Goal**  
+Demonstrate solid SQL skills (aggregations, window functions, CTEs, date handling, subqueries) while thinking like a **data analyst** — focusing on **business value** and clear recommendations rather than just technical queries.
 
-**Dataset**
-I used a data set that is available on Kaggle (E-commerce sales) containing order_date, product_name, category, region, quantity, sales and profit columns.
+**Dataset**  
+Public Kaggle dataset: https://www.kaggle.com/datasets/sidramazam/e-commerce-sales-performance-analysis
+Columns: `order_date`, `product_name`, `category`, `region`, `quantity`, `sales`, `profit`  
+Time span: ~3 years (2022–2024)
 
-**Key Questions Answered**:
-- What are the overall KPIs (total revenue, profit)?
-- How have sales and orders trended over time?
-- Which categories / products drive the most revenue and profit?
-- Which regions perform best / worst?
-- What is the profit by category and region?
-- Which products are underperforming (low or negative profit)?
+**Key Questions Answered**
+- What are the overall KPIs (revenue, profit, margin)?
+- How have sales/orders trended over time?
+- Which categories/products drive the most revenue & profit?
+- How do regions compare in performance?
+- Which products/categories are underperforming?
 
 ## 🛠️ Tools & Technologies
 
-- **Database**: MySQL
-- **SQL Features Used**: GROUP BY, ORDER BY, CTEs, Subqueries, Window functions (running totals), DATE_FORMAT, aggregations
-
+- **Database**: MySQL  
+- **SQL Features Demonstrated**: GROUP BY, CTEs, window functions (running totals), DATE_FORMAT, subqueries, aggregations, data type changes  
 
 ## 📊 Key Insights & Business Recommendations
 
-- Total revenue reached **10 667 881**, with an overall profit of **1 844 665** in 3 years (2022-2024). The profit margin remained relativeLY the same for the first two years at **~18%** and decresed slightly in 2024 to **~17%**. This indicates low profitability or slow growth
-- **Electronics** category generates **5 326 074** of revenue, and **923 186** of profit, both of which are the highest, making it the most profitable category. Increasing marketing efforts to increase sales in this category could boost the company's profitability
+### Overall Performance (2022–2024)
+- **Total revenue**: 10,667,881  
+- **Total profit**: 1,844,665  
+- **Average profit margin**: ~17.3%  
+- Profit Margin trend: stable at ~18% in 2022–2023, slight decline to ~17% in 2024  
+**Interpretation**: Profitability is consistent but not growing — possible causes include rising input costs, increased discounting, or competitive pressure. Margin compression should be monitored.
 
-## Regional Analysis ##
-- Interestingly, sales volume, revenue, and profit are distributed quite evenly across all regions (differences < 12–15%). This suggests the business has achieved strong national    consistency in marketing, pricing, product offering, and delivery, a sign of a well-executed, scalable e-commerce model with limited geographic dependency.
-However, small variations in profit margin and average order value still exist. Next steps could include:
-- Testing targeted promotions in the slightly higher-margin regions
-- Monitoring whether new infrastructure investments create divergence over time
+### Category Performance
+- **Electronics** is the clear leader:  
+  • Revenue: **5,326,074** (~50% of total)  
+  • Profit: **923,186** (~50% of total profit)  
+ **Strong recommendation**: Allocate more marketing budget and inventory focus to Electronics - this category drives the majority of profitability.
 
-## Product Analysis ##  
-**Monitors** lead in volume, but **Cameras** have the highest profit margin. Therefore, the company must protect & promote Monitor + Camera (high volume + high profit margin)
-- Smartwatches lag in price per unit,  possible entry-level positioning or heavy promotion.
+*(Other categories — add if you have the numbers, e.g.: Fashion ~22% revenue but lower margin)*
+
+### Regional Performance
+- Sales volume, revenue, and profit are distributed **very evenly** across regions (variation < 12–15%).  
+- This indicates **strong national consistency** in pricing, delivery, marketing, and operations — a sign of a well-executed, scalable e-commerce model.  
+**Opportunity**: Small existing differences in profit margin and average order quantity could be amplified through targeted regional experiments (e.g., promotions in higher-margin areas, faster shipping pilots).
+
+### Product Highlights
+- Top 5 sellers are Monitors, Smartwatches, Cameras, Mouses and Printers respectively
+- **Monitors** lead in units sold (highest volume)  
+- **Cameras** show the strongest profit margin among top sellers  
+- **Smartwatches** have the lowest average unit price, likely entry-level positioning or heavy promotional discounting  
+**Recommendation**: Protect and promote the **Monitor + Camera** combination (high volume + high margin).  
+Review Smartwatch pricing, bundling, or discounting strategy to improve contribution margin.
 
 ## 🔍 Project Walkthrough: Step-by-Step Process
 
-I followed a structured, analyst-first approach to extract meaningful insights from the raw e-commerce sales data. Below is the exact journey I took — from first opening the dataset to delivering business-ready recommendations.
+I followed a structured, analyst-first approach from raw data to business recommendations.
 
-### 1. Understanding the Data (Schema & Initial Exploration)
-**Goal**: Know what I’m working with before touching anything.
+### 1. Understanding the Data
+**Goal**: Build confidence in the dataset before analysis.  
+- Created a working copy of the table to preserve original data  
+- Ran `DESCRIBE sales;` to check structure & data types  
+- Inspected date range, unique values (categories, regions), and basic counts/statistics  
 
-- I created and worked with duplicate tables to preserve the original data
-- Ran `DESCRIBE sales;` to inspect column names and data types  
-- Checked date range, unique values, and basic statistics
+![Table Schema](screenshots/01_describe_sales.png)
 
 ### 2. Data Cleaning
-**Goal**: Make the data trustworthy and analysis-ready.
+**Goal**: Ensure trustworthy numbers.  
+- Removed duplicate rows  
+- Standardized text formatting
+- Handled NULLs and blanks in key columns  
+- Changed `sales` and `profit` to `DECIMAL(12,2)` to avoid rounding errors with monetary values  
+- Confirmed `order_date` was properly stored as `DATE`  
 
-Steps I performed:
-- Removed duplicate rows
-- Standardized text (category and region names)
-- Handled NULLs and blanks
-- Changed data types (`Sales` and `Profit` from INT/DOUBLE to `DECIMAL(12,2)`)
-- Verified date column was properly stored as `DATE`
+### 3. Exploratory Data Analysis (EDA)
+**Goal**: Discover patterns and answer stakeholder questions.  
+- Calculated overall KPIs and yearly/monthly trends  
+- Used window functions for running totals of orders & revenue  
+- Ranked categories, products, and regions by revenue, profit, and margin   
 
-**Key query used**:
-```sql
-ALTER TABLE sales 
-MODIFY COLUMN Sales DECIMAL(12,2),
-MODIFY COLUMN Profit DECIMAL(12,2);
+![Monthly Trend Example](screenshots/02_monthly_trend.png)  
+![Top Products by Revenue](screenshots/03_top_products.png)
+
+### 4. Business Insights & Recommendations
+Translated numbers into decisions:  
+- Focus should be placed on high-impact categories/products to increase sales and profit
+- Noted uniform regional performance as a strength  
+- Flagged slight margin decline as a watch area
 
 ## 📁 Project Files
 
-- `sales.sql`               → Main SQL script with all cleaning + analysis queries
-- `schema.png` / `describe_output.txt` → Table structure & data types
-- `insights.md` / screenshots → Visuals & key result tables (optional)
-- `README.md`               → This file
+- `sales_analysis.sql` → All cleaning + analysis queries (well-commented)  
+- `screenshots/` → Key query outputs & visuals  
+- `README.md` → This file
 
 ## 🔍 How to Run / Explore This Project
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ecommerce-sales-analysis.git
+   git clone https://github.com/Liteboho27/ecommerce-sales-analysis.git

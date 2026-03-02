@@ -11,7 +11,7 @@ Demonstrate solid SQL skills (aggregations, window functions, CTEs, date handlin
 **Dataset**  
 Public Kaggle dataset: https://www.kaggle.com/datasets/sidramazam/e-commerce-sales-performance-analysis
 Columns: `order_date`, `product_name`, `category`, `region`, `quantity`, `sales`, `profit`  
-Time span: ~3 years (2022–2024)
+Time span: 3 years (2022–2024)
 
 **Key Questions Answered**
 - What are the overall KPIs (revenue, profit, margin)?

@@ -63,7 +63,7 @@ I followed a structured, analyst-first approach from raw data to business recomm
 - Ran `DESCRIBE sales;` to check structure & data types  
 - Inspected date range, unique values (categories, regions), and basic counts/statistics  
 
-![Table Schema](screenshots/01_describe_sales.png)
+![Table Schema]([screenshots/01_describe_sales.png](https://github.com/Liteboho27/PROJECTS/blob/5a590baed0cfbc9ea292dce6bb82f917fb1c94f9/Table%20Schema.png)
 
 ### 2. Data Cleaning
 **Goal**: Ensure trustworthy numbers.  

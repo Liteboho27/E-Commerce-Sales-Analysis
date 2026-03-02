@@ -6,7 +6,7 @@ In this project, I analyzed an **e-commerce sales dataset** using **pure MySQL**
 I performed data cleaning, exploratory data analysis (EDA), and answered real-world questions that managers and stakeholders typically ask.
 
 **Goal**  
-Demonstrate solid SQL skills (aggregations, window functions, CTEs, date handling, subqueries) while thinking like a **data analyst** — focusing on **business value** and clear recommendations rather than just technical queries.
+Demonstrate solid SQL skills (aggregations, window functions, CTEs, date handling, subqueries) while thinking like a **data analyst**, focusing on **business value** and clear recommendations rather than just technical queries.
 
 **Dataset**  
 Public Kaggle dataset: https://www.kaggle.com/datasets/sidramazam/e-commerce-sales-performance-analysis

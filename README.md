@@ -61,7 +61,8 @@ I followed a structured, analyst-first approach from raw data to business recomm
 **Goal**: Build confidence in the dataset before analysis.  
 - Created a working copy of the table to preserve original data  
 - Ran `DESCRIBE sales;` to check structure & data types  
-- Inspected date range, unique values (categories, regions), and basic counts/statistics  
+- Inspected date range, unique values (categories, regions), and basic counts/statistics
+- Corrected data types to standardise the data  
 
 (https://github.com/Liteboho27/PROJECTS/blob/5a590baed0cfbc9ea292dce6bb82f917fb1c94f9/Table%20Schema.png)
 

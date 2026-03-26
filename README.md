@@ -62,10 +62,10 @@ I followed a structured, analyst-first approach from raw data to business recomm
 - Created a working copy of the table to preserve original data  
 - Ran `DESCRIBE sales;` to check structure & data types  
 - Inspected date range, unique values (categories, regions), and basic counts/statistics
-- Corrected data types to standardise the data  
+- Corrected data types to standardise the data
+  
+<img width="956" height="359" alt="Data Types" src="https://github.com/user-attachments/assets/ea767367-1271-4215-8f43-1d72bc4c0b85" />
 
-(https://github.com/Liteb<img width="1366" height="768" alt="Screenshot (8)" src="https://github.com/user-attachments/assets/0329db97-e8a1-4a87-a6f4-35d9988fae27" />
-oho27/PROJECTS/blob/5a590baed0cfbc9ea292dce6bb82f917fb1c94f9/Table%20Schema.png)
 
 ### 2. Data Cleaning
 **Goal**: Ensure trustworthy numbers.  

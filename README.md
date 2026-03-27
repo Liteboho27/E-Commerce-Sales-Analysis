@@ -81,8 +81,14 @@ I followed a structured, analyst-first approach from raw data to business recomm
 - Used window functions for running totals of orders & revenue  
 - Ranked categories, products, and regions by revenue, profit, and margin   
 
-![Monthly Trend Example](screenshots/02_monthly_trend.png)  
-![Top Products by Revenue](screenshots/03_top_products.png)
+<img width="1366" height="316" alt="Monthly orders_running totals" src="https://github.com/user-attachments/assets/c2c14794-b203-4f14-937a-3f773c2352d8" />
+
+
+<img width="743" height="425" alt="Monthly orders_Running totals table" src="https://github.com/user-attachments/assets/3b20386e-57a6-4e63-a242-06118eb33b45" />
+
+
+<img width="1164" height="374" alt="Sales and profit by category" src="https://github.com/user-attachments/assets/474e9111-1c71-4cf3-a5c6-29a64332367d" />
+
 
 ### 4. Business Insights & Recommendations
 Translated numbers into decisions:  

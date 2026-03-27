@@ -90,6 +90,10 @@ I followed a structured, analyst-first approach from raw data to business recomm
 <img width="1164" height="374" alt="Sales and profit by category" src="https://github.com/user-attachments/assets/474e9111-1c71-4cf3-a5c6-29a64332367d" />
 
 
+<img width="1149" height="428" alt="Profit margin per year" src="https://github.com/user-attachments/assets/44fb9d19-8c63-4817-bd28-68760beab4db" />
+
+
+
 ### 4. Business Insights & Recommendations
 Translated numbers into decisions:  
 - Focus should be placed on high-impact categories/products to increase sales and profit
@@ -98,8 +102,7 @@ Translated numbers into decisions:
 
 ## 📁 Project Files
 
-- `sales_analysis.sql` → All cleaning + analysis queries (well-commented)  
-- `screenshots/` → Key query outputs & visuals  
+- `e-commerce sales project.sql` → All cleaning + analysis queries (well-commented)   
 - `README.md` → This file
 
 ## 🔍 How to Run / Explore This Project

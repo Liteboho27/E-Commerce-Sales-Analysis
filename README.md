@@ -32,7 +32,7 @@ Time span: 3 years (2022–2024)
 - **Total profit**: $1,844,665  
 - **Average profit margin**: ~17.3%  
 - Profit Margin trend: stable at ~18% in 2022–2023, slight decline to ~17% in 2024  
-**Interpretation**: Profitability is consistent but not growing — possible causes include rising input costs, increased discounting, or competitive pressure. Margin compression should be monitored.
+**Interpretation**: Profitability is consistent but not growing, possible causes include rising input costs, increased discounting, or competitive pressure. Margin compression should be monitored.
 
 ### Product Category Performance
 - **Electronics** is the clear leader:  

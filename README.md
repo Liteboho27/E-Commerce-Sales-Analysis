@@ -1,11 +1,11 @@
 # E-commerce Sales Analysis 
 ## 📌 Project Overview
 
-In this project, I analyzed an **e-commerce sales dataset** using **pure MySQL** to uncover actionable business insights.  
+In this project, I analyzed an **e-commerce sales dataset** using **MySQL** to uncover actionable business insights.  
 I performed data cleaning, exploratory data analysis (EDA), and answered real-world questions that managers and stakeholders typically ask.
 
 **Goal**  
-Demonstrate solid SQL skills (aggregations, window functions, CTEs, date handling, subqueries) while thinking like a data analyst, focusing on **business value** and clear recommendations rather than just technical queries.
+Demonstrate solid SQL skills (aggregations, window functions, CTEs, date handling, subqueries) while thinking like a data analyst, focusing on **business value** and clear recommendations.
 
 **Dataset**  
 Public Kaggle dataset: https://www.kaggle.com/datasets/sidramazam/e-commerce-sales-performance-analysis

@@ -104,8 +104,3 @@ Translated numbers into decisions:
 - `e-commerce sales project.sql` → All cleaning + analysis queries (well-commented)   
 - `README.md` → This file
 
-## 🔍 How to Run / Explore This Project
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Liteboho27/ecommerce-sales-analysis.git

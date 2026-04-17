@@ -1,5 +1,4 @@
-# E-commerce Sales Analysis – SQL Portfolio Project
-
+# E-commerce Sales Analysis 
 ## 📌 Project Overview
 
 In this project, I analyzed an **e-commerce sales dataset** using **pure MySQL** to uncover actionable business insights.  
